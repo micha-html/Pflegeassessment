@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pflegeassessments iPad - Vollständige Skalen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f8f7f4;--surface:#fdfdfc;--surface2:#ffffff;--border:#e5e2de;--text:#2b2521;--muted:#6c6862;--primary:#0a6d78;--shadow:0 6px 25px rgba(0,0,0,.06);--r:16px;--body:'Aptos',Segoe UI,Arial,sans-serif;--display:'Aptos',Segoe UI,Arial,sans-serif}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;padding:0;font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
+    .app{max-width:1200px;margin:0 auto;padding:24px 20px}
+    .hero{margin-bottom:32px}
+    .brand{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:24px}
+    .brand-left{display:flex;gap:16px;align-items:flex-start;flex:1}
+    .logo{width:44px;height:44px;color:var(--primary);flex-shrink:0}
+    .eyebrow{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:8px}
+    .title{font-family:var(--display);font-weight:300;font-size:2.2rem;line-height:1.05;margin:0;max-width:13ch;letter-spacing:-.02em}
+    .school{font-size:.82rem;font-weight:700;color:var(--primary);text-align:right;line-height:1.05;min-width:170px}
+    .panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);padding:24px;margin-bottom:24px}
+    .meta{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+    label{display:block;margin-bottom:8px;font-weight:600}
+    input[type="text"],input[type="date"]{width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:12px;background:var(--surface2);font:inherit;font-size:1rem;color:var(--text)}
+    input:focus{outline:none;border-color:var(--primary)}
+    .lead{font-size:1rem;color:var(--muted);line-height:1.55}
+    .lead strong{display:block;margin-bottom:12px;font-weight:600;color:var(--text)}
+    .lead ol{margin:0;padding-left:24px}
+    .toolbar{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .btn{padding:14px 24px;border:1px solid var(--border);background:var(--surface2);color:var(--text);border-radius:999px;font:inherit;cursor:pointer;font-weight:500;min-height:48px;flex:1}.option{transition:none}
+
+    .btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+    .overview h2{margin:0 0 12px 0;font-size:1.4rem;font-weight:600}
+    .overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:16px}
+    .overview-card{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:20px}
+    .overview-card h3{margin:0 0 12px 0;font-size:1.1rem}
+    .overview-card .risk{font-weight:700;font-size:1.05rem;margin-top:8px}
+    .assessment-head h2{margin:0 0 8px 0;font-size:1.35rem;font-weight:500}
+    .assessment-head .hint{color:var(--muted);margin:0;font-size:.95rem}
+    .item{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:20px;margin:16px 0}
+    .item h3{margin:0 0 14px 0;font-size:1.1rem}
+    .options{display:grid;gap:10px}
+    .option{display:flex;gap:12px;align-items:flex-start;padding:12px;background:#fff;border:1px solid #ede9e4;border-radius:12px;cursor:pointer;-webkit-tap-highlight-color:rgba(10,109,120,.15);touch-action:manipulation;user-select:none;-webkit-user-select:none;}.option input{margin-top:2px;transform:scale(1.2);flex-shrink:0}
+    .scorebox{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+    .kpi{background:#f8f6f2;border:1px solid var(--border);border-radius:14px;padding:16px;text-align:center}
+    .kpi small{display:block;font-size:.75rem;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+    .kpi strong{font-size:1.25rem;font-weight:700;color:var(--primary)}
+    @media (max-width: 900px){.brand{flex-direction:column;gap:12px}.school{text-align:left;min-width:0}.meta,.scorebox{grid-template-columns:1fr}}
+    @media print{.btn{display:none}.panel{box-shadow:none;border:none}#pdfHint{display:none !important}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <section class="hero">
+      <div class="brand">
+        <div class="brand-left">
+          <svg class="logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="8" y="8" width="48" height="48" rx="14" stroke="currentColor" stroke-width="4"/><path d="M20 24h24M20 32h16M20 40h24" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="46" cy="32" r="6" fill="currentColor"/></svg>
+          <div><div class="eyebrow">Pflege • Ausbildung • ILIAS</div><h1 class="title">Interaktive Pflegeassessments</h1></div>
+        </div>
+        <div class="school">SILOAH<br>Bildungszentrum<br>für Pflegeberufe</div>
+      </div>
+      <div class="panel">
+        <div class="meta">
+          <label>Patientenname (Datenschutz beachten) <input type="text" id="patientName"></label>
+          <label>Datum <input type="date" id="assessmentDate"></label>
+        </div>
+        <div class="toolbar">
+          <button class="btn primary" onclick="window.print()" id="pdfBtn">PDF speichern</button>
+          <button class="btn" onclick="resetAll()">Löschen</button>
+        </div>
+      </div>
+      <div id="pdfSteps" style="margin-top:16px;padding:16px;border:1px solid #e5e2de;border-radius:14px;background:#fff;">
+        <strong>PDF speichern (iPad)</strong>
+        <ol style="margin:10px 0 0 20px;line-height:1.7;color:#2b2521;">
+          <li>Auf <strong>„PDF speichern"</strong> tippen.</li>
+          <li>Im Druckdialog auf <strong>„Teilen"</strong> tippen.</li>
+          <li><strong>„In Dateien sichern"</strong> antippen – fertig.</li>
+        </ol>
+      </div>
+
+    </section>
+
+    <section class="overview panel">
+      <h2>Gesamtübersicht</h2>
+      <p class="hint">Die berechneten Risiken aus allen Skalen auf einen Blick.</p>
+      <div class="overview-grid">
+        <div class="overview-card"><h3>Thromboserisiko<br><small>Frowein-Skala</small></h3><div>Punkte: <span id="ov-f-score">–</span></div><div class="risk" id="ov-f-risk">Noch nicht bearbeitet</div></div>
+        <div class="overview-card"><h3>Pneumonierisiko<br><small>Bienstein-Skala</small></h3><div>Punkte: <span id="ov-p-score">–</span></div><div class="risk" id="ov-p-risk">Noch nicht bearbeitet</div></div>
+        <div class="overview-card"><h3>Dekubitusrisiko<br><small>Braden-Skala</small></h3><div>Punkte: <span id="ov-b-score">–</span></div><div class="risk" id="ov-b-risk">Noch nicht bearbeitet</div></div>
+        <div class="overview-card"><h3>Kontrakturrisiko<br><small>RiP-Skala</small></h3><div>Punkte: <span id="ov-k-score">–</span></div><div class="risk" id="ov-k-risk">Noch nicht bearbeitet</div></div>
+        <div class="overview-card"><h3>Sturzrisiko<br><small>Morse-Skala</small></h3><div>Punkte: <span id="ov-s-score">–</span></div><div class="risk" id="ov-s-risk">Noch nicht bearbeitet</div></div>
+      </div>
+    </section>
+
+    <!-- FROWEIN THROMBOSE -->
+    <section class="panel">
+      <div class="assessment-head"><h2>Frowein-Skala – Thromboserisiko</h2><p class="hint">Thromboserisiko: 1-3=gering, 4-6=mittel, >6=hoch</p></div>
+      <div class="item"><h3>1. Varikosis</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f0" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f0" value="1"><span>Leicht (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f0" value="4"><span>Stark (4)</span></label></div></div>
+      <div class="item"><h3>2. Frühere Thrombose/Lungenembolie</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f1" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f1" value="4"><span>Ja (4)</span></label></div></div>
+      <div class="item"><h3>3. AVK</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f2" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f2" value="2"><span>Stadium I-IIa (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f2" value="4"><span>Stadium IIIb-IV (4)</span></label></div></div>
+      <div class="item"><h3>4. Alter</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f3" value="0"><span>< 40 J. (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f3" value="1"><span>> 40 J. (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f3" value="2"><span>> 60 J. (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f3" value="3"><span>> 70 J. (3)</span></label></div></div>
+      <div class="item"><h3>5. Mobilität</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f4" value="0"><span>Mobil (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f4" value="2"><span>Teilmobil (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f4" value="4"><span>Immobil (4)</span></label></div></div>
+      <div class="item"><h3>6. Lähmungen</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f5" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f5" value="3"><span>Querschnitts-/Halbseitenlähmung (3)</span></label></div></div>
+      <div class="item"><h3>7. Frakturen</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f6" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f6" value="2"><span>Unterschenkel (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f6" value="7"><span>Oberschenkel (7)</span></label></div></div>
+      <div class="item"><h3>8. Stützverband</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f7" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f7" value="3"><span>Gehgips (3)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f7" value="7"><span>Liegegips (7)</span></label></div></div>
+      <div class="item"><h3>9. Herzinsuffizienz</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f8" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f8" value="3"><span>Stadium I-III (3)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f8" value="6"><span>Stadium IV (6)</span></label></div></div>
+      <div class="item"><h3>10. Myokardinfarkt</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f9" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f9" value="4"><span>Ja (4)</span></label></div></div>
+      <div class="item"><h3>11. Schwangerschaft</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f10" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f10" value="1"><span>Ja (1)</span></label></div></div>
+      <div class="item"><h3>12. Postpartal</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f11" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f11" value="2"><span>Ja (2)</span></label></div></div>
+      <div class="item"><h3>13. Übergewicht</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f12" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f12" value="2"><span>BMI > 25 (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f12" value="4"><span>BMI > 30 (4)</span></label></div></div>
+      <div class="item"><h3>14. Schwere Entzündung</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f13" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f13" value="7"><span>Ja (7)</span></label></div></div>
+      <div class="item"><h3>15. Sepsis</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f14" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f14" value="7"><span>Ja (7)</span></label></div></div>
+      <div class="item"><h3>16. Maligner Tumor</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f15" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f15" value="7"><span>Ja (7)</span></label></div></div>
+      <div class="item"><h3>17. Operation</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f16" value="0"><span>Keine (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f16" value="1"><span>Kleine Eingriffe < 30 min (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f16" value="3"><span>Allgemeinchir. OP > 30 min (3)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f16" value="7"><span>Malignom-OP/Große Eingriffe (7)</span></label></div></div>
+      <div class="item"><h3>18. Schwere Verletzungen</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f17" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f17" value="7"><span>Ja (7)</span></label></div></div>
+      <div class="item"><h3>19. Orale Kontrazeption</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f18" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f18" value="2"><span>Ja (2)</span></label></div></div>
+      <div class="item"><h3>20. Rauchen</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="f19" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="f19" value="2"><span>Ja (2)</span></label></div></div>
+      <div class="scorebox"><div class="kpi"><small>Gesamtpunkte</small><strong id="f-score">–</strong></div><div class="kpi"><small>Risikoeinstufung</small><strong id="f-risk">Noch nicht bearbeitet</strong></div></div>
+    </section>
+
+    <!-- BIENSTEIN PNEUMONIE -->
+    <section class="panel">
+      <div class="assessment-head"><h2>Bienstein-Skala – Pneumonierisiko</h2><p class="hint">0-6=nicht gefährdet, 7-15=gefährdet, 16-45=stark gefährdet</p></div>
+      <div class="item"><h3>1. Bereitschaft zur Mitarbeit</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p0" value="0"><span>Kontinuierlich (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p0" value="1"><span>Nach Aufforderung (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p0" value="2"><span>Nur nach Aufforderung (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p0" value="3"><span>Keine Mitarbeit (3)</span></label></div></div>
+      <div class="item"><h3>2. Akute Atemwegserkrankung</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p1" value="0"><span>Keine (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p1" value="1"><span>Leichter Infekt (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p1" value="2"><span>Bronchialinfekt (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p1" value="3"><span>Lungenerkrankung (3)</span></label></div></div>
+      <div class="item"><h3>3. Frühere Lungenerkrankung</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p2" value="0"><span>Keine (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p2" value="1"><span>Leichte Infekte (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p2" value="2"><span>Schwere Verläufe (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p2" value="3"><span>Mit bleibender Einschränkung (3)</span></label></div></div>
+      <div class="item"><h3>4. Immunschwäche</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p3" value="0"><span>Keine (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p3" value="1"><span>Leicht (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p3" value="2"><span>Erhöhte (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p3" value="3"><span>Völlige (3)</span></label></div></div>
+      <div class="item"><h3>5. Raucher / Passivraucher</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p4" value="0"><span>Nichtraucher / Passiv gering (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p4" value="1"><span>< 6 leichte / Passiv regelm. (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p4" value="2"><span>6 starke / Passiv regelm. (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p4" value="3"><span>> 6 starke / Passiv ständig (3)</span></label></div></div>
+      <div class="item"><h3>6. Schmerzen</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p5" value="0"><span>Keine (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p5" value="1"><span>Leichte Dauerschmerzen (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p5" value="2"><span>Mäßige, atmungsbeeinflussend (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p5" value="3"><span>Starke, atmungsbeeinflussend (3)</span></label></div></div>
+      <div class="item"><h3>7. Schluckstörungen</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p6" value="0"><span>Keine (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p6" value="1"><span>Bei flüssiger Nahrung (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p6" value="2"><span>Bei breiiger Nahrung (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p6" value="3"><span>Komplette Schluckstörung (3)</span></label></div></div>
+      <div class="item"><h3>8. Oro-tracheale Maßnahmen</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p7" value="0"><span>Keine (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p7" value="1"><span>Nasen- und Mundpflege (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p7" value="2"><span>Oro-nasale Absaugung (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p7" value="3"><span>Oro-nasale u. endotrach. Absaugung (3)</span></label></div></div>
+      <div class="item"><h3>9. Mobilitätseinschränkungen</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p8" value="0"><span>Keine (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p8" value="1"><span>Gehhilfen (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p8" value="2"><span>Hauptsächlich Bettruhe (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p8" value="3"><span>Völlige Immobilität (3)</span></label></div></div>
+      <div class="item"><h3>10. Berufstätigkeit</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p9" value="0"><span>Nicht lungengefährdend (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p9" value="1"><span>Arbeit in gefährdendem Beruf (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p9" value="2"><span>2-10 Jahre in gefährdendem Beruf (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p9" value="3"><span>> 10 Jahre in gefährdendem Beruf (3)</span></label></div></div>
+      <div class="item"><h3>11. Intubationsnarkose Beatmung</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p10" value="0"><span>Keine in den letzten 3 Wo. (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p10" value="1"><span>Kurze < 2 Std. (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p10" value="2"><span>Länger > 2 Std. (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p10" value="3"><span>Lang > 12 Std. (3)</span></label></div></div>
+      <div class="item"><h3>12. Bewusstseinslage</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p11" value="0"><span>Keine Einschränkung (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p11" value="1"><span>Leichte E. (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p11" value="2"><span>Reagiert inadäquat (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p11" value="3"><span>Keine Reaktion (3)</span></label></div></div>
+      <div class="item"><h3>13. Atemanstrengung</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p12" value="0"><span>Ohne Anstrengung (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p12" value="1"><span>Mit Anstrengung (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p12" value="2"><span>Mit großer Hilfestellung (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p12" value="3"><span>Keine Zwerchfell-/Thoraxatmung (3)</span></label></div></div>
+      <div class="item"><h3>14. Atemfrequenz</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p13" value="0"><span>14-20 Atemzüge/min (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p13" value="1"><span>Unregelmäßig (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p13" value="2"><span>Brady- oder tachypnoeisch (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p13" value="3"><span>Sehr unregelmäßig (3)</span></label></div></div>
+      <div class="item"><h3>15. Medikamente (atemdepressiv)</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="p14" value="0"><span>Keine (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p14" value="1"><span>Unregelm., geringe Depr. (1)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p14" value="2"><span>Regelmäßig, mäßige Depr. (2)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="p14" value="3"><span>Regelmäßig, Opiate/Barbiturate (3)</span></label></div></div>
+      <div class="scorebox"><div class="kpi"><small>Gesamtpunkte</small><strong id="p-score">–</strong></div><div class="kpi"><small>Risikoeinstufung</small><strong id="p-risk">Noch nicht bearbeitet</strong></div></div>
+    </section>
+
+    <!-- BRADEN DEKUBITUS -->
+    <section class="panel">
+      <div class="assessment-head"><h2>Braden-Skala – Dekubitusrisiko</h2><p class="hint">15-18=allgemein, 13-14=mittel, 10-12=hoch, <9=sehr hoch</p></div>
+      <div class="item"><h3>1. Sensorisches Empfindungsvermögen</h3><p class="lead">Fähigkeit, adäquat auf druckbedingte Beschwerden zu reagieren</p><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="b0" value="1"><span><strong>Fehlt völlig (1)</strong><br><small>Keine Reaktion auf Schmerzreize; Lähmung des gesamten Körpers</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b0" value="2"><span><strong>Stark eingeschränkt (2)</strong><br><small>Reaktion nur auf starke Reize; Beschwerden kaum äußerbar</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b0" value="3"><span><strong>Leicht eingeschränkt (3)</strong><br><small>Reaktion auf Ansprache; Beschwerden nicht ausdrückbar</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b0" value="4"><span><strong>Vorhanden (4)</strong><br><small>Keine Einschränkung; reagiert normal auf Beschwerden</small></span></label></div></div>
+      <div class="item"><h3>2. Feuchtigkeit</h3><p class="lead">Ausmaß, in dem die Haut Feuchtigkeit ausgesetzt ist</p><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="b1" value="1"><span><strong>Ständig feucht (1)</strong><br><small>Haut ständig nass durch Urin, Schweiß oder Kot</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b1" value="2"><span><strong>Oft feucht (2)</strong><br><small>Haut oft feucht; Wäsche mind. 1× pro Schicht wechseln</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b1" value="3"><span><strong>Manchmal feucht (3)</strong><br><small>Haut manchmal feucht; ca. 1× täglich neue Wäsche nötig</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b1" value="4"><span><strong>Selten feucht (4)</strong><br><small>Haut meist trocken; Wäsche in normalen Abständen wechseln</small></span></label></div></div>
+      <div class="item"><h3>3. Aktivität</h3><p class="lead">Ausmaß der physischen Aktivität</p><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="b2" value="1"><span><strong>Bettlägerig (1)</strong><br><small>Ans Bett gebunden</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b2" value="2"><span><strong>Sitzt auf (2)</strong><br><small>Kann mit Hilfe etwas laufen; verbringt Zeit in Stuhl/Rollstuhl</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b2" value="3"><span><strong>Geht wenig (3)</strong><br><small>Geht tagsüber selten und nur kurze Strecken allein</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b2" value="4"><span><strong>Geht regelmäßig (4)</strong><br><small>Geht mind. 2× täglich und bewegt sich regelmäßig</small></span></label></div></div>
+      <div class="item"><h3>4. Mobilität</h3><p class="lead">Fähigkeit, die Körperposition zu wechseln und zu halten</p><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="b3" value="1"><span><strong>Komplett immobil (1)</strong><br><small>Kein selbstständiger Positionswechsel möglich</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b3" value="2"><span><strong>Stark eingeschränkt (2)</strong><br><small>Gelegentliche Bewegungen; kann sich nicht allein ausreichend umlagern</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b3" value="3"><span><strong>Gering eingeschränkt (3)</strong><br><small>Macht regelmäßig kleine Positionswechsel selbstständig</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b3" value="4"><span><strong>Mobil (4)</strong><br><small>Verändert selbstständig und häufig die Position</small></span></label></div></div>
+      <div class="item"><h3>5. Ernährung</h3><p class="lead">Ernährungsgewohnheiten</p><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="b4" value="1"><span><strong>Sehr schlecht (1)</strong><br><small>Isst kaum; weniger als 2 Eiweißportionen; trinkt zu wenig</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b4" value="2"><span><strong>Mäßig (2)</strong><br><small>Isst selten die ganze Portion; ca. 3 Eiweißportionen</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b4" value="3"><span><strong>Adäquat (3)</strong><br><small>Isst mehr als die Hälfte; 4 Eiweißportionen</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b4" value="4"><span><strong>Gut (4)</strong><br><small>Isst immer alles auf; 4+ Eiweißportionen; kein Ergänzungsbedarf</small></span></label></div></div>
+      <div class="item"><h3>6. Reibung und Scherkräfte</h3><p class="lead">Ausmaß von Reibung und Scherkräften auf die Haut</p><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="b5" value="1"><span><strong>Problem (1)</strong><br><small>Braucht viel Hilfe; rutscht ständig herunter; spastische Kontrakturen</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b5" value="2"><span><strong>Potentielles Problem (2)</strong><br><small>Braucht etwas Hilfe; schleift leicht über Laken</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="b5" value="3"><span><strong>Kein Problem (3)</strong><br><small>Bewegt sich selbstständig; hebt sich an; hält Position</small></span></label></div></div>
+      <div class="scorebox"><div class="kpi"><small>Gesamtpunkte</small><strong id="b-score">–</strong></div><div class="kpi"><small>Risikoeinstufung</small><strong id="b-risk">Noch nicht bearbeitet</strong></div></div>
+    </section>
+
+    <!-- KONTRAKTUR -->
+    <section class="panel">
+      <div class="assessment-head"><h2>RiP-Skala – Kontrakturrisiko</h2></div>
+      <div class="item"><h3>Beweglichkeit und Gelenknutzung</h3><p class="lead">Beurteilung der Eigenbewegung und Gelenknutzung</p><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="k0" value="0"><span><strong>Risiko 0 – Keine Einschränkung (0)</strong><br><small>Keine Bewegungseinschränkung erkennbar</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="k0" value="1"><span><strong>Risiko 1 – Gleichbleibende Position (1)</strong><br><small>Verharrt überwiegend in gleicher Position; Gelenke können aber bewegt werden; Eigenbewegung insgesamt erhalten</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="k0" value="2"><span><strong>Risiko 2 – Bewegungseingeschränkt (2)</strong><br><small>Bewegungseingeschränkt und/oder ortsfixiert; geringe Eigenbewegung; Gelenke können mit Unterstützung aktiv bewegt werden</small></span></label><label class="option" onclick="updateAll()"><input type="radio" name="k0" value="3"><span><strong>Risiko 3 – Weitgehend immobil (3)</strong><br><small>Weitgehend bewegungseingeschränkt und/oder ortsfixiert; bestehende Kontrakturen; Gelenke können nur passiv bewegt werden</small></span></label></div></div>
+      <div class="scorebox"><div class="kpi"><small>Gesamtpunkte</small><strong id="k-score">–</strong></div><div class="kpi"><small>Risikoeinstufung</small><strong id="k-risk">Noch nicht bearbeitet</strong></div></div>
+    </section>
+
+    <!-- STURZ -->
+    <section class="panel">
+      <div class="assessment-head"><h2>Morse-Skala – Sturzrisiko</h2><p class="hint">0-24 = geringes Risiko, 25-45 = mittleres Risiko, >45 = hohes Risiko</p></div>
+      <div class="item"><h3>1. Sturz in der Vergangenheit</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="s0" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="s0" value="25"><span>Ja (25)</span></label></div></div>
+      <div class="item"><h3>2. Mehr als eine Erkrankung bekannt</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="s1" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="s1" value="15"><span>Ja (15)</span></label></div></div>
+      <div class="item"><h3>3. i.v.-Therapie</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="s2" value="0"><span>Nein (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="s2" value="20"><span>Ja (20)</span></label></div></div>
+      <div class="item"><h3>4. Gehhilfe</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="s3" value="0"><span>Ohne Gehhilfe / gestützt / Rollstuhl / Bettruhe (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="s3" value="15"><span>Krücken / Gehstock / andere mechanische Gehhilfe (15)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="s3" value="30"><span>Stützt sich an Möbeln ab (30)</span></label></div></div>
+      <div class="item"><h3>5. Gangsicherheit</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="s4" value="0"><span>Sicher oder Bettruhe (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="s4" value="10"><span>Unsicher (10)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="s4" value="20"><span>In Umgebung erheblich beeinträchtigt (20)</span></label></div></div>
+      <div class="item"><h3>6. Orientierung</h3><div class="options"><label class="option" onclick="updateAll()"><input type="radio" name="s5" value="0"><span>Schätzt Mobilität richtig ein und befolgt Anweisungen (0)</span></label><label class="option" onclick="updateAll()"><input type="radio" name="s5" value="15"><span>Überschätzt sich / vergisst Anweisungen (15)</span></label></div></div>
+      <div class="scorebox"><div class="kpi"><small>Gesamtpunkte</small><strong id="s-score">–</strong></div><div class="kpi"><small>Risikoeinstufung</small><strong id="s-risk">Noch nicht bearbeitet</strong></div></div>
+    </section>
+<!-- STURZ -->
+    
+    <div class="panel" style="margin-top:24px;">
+      <p style="margin:0;color:#6c6862;font-size:.95rem;">Hinweis: Diese Assessments wurden eigenständig erstellt und orientieren sich in Aufbau und Bewertung an bekannten, fachlich etablierten Skalen und Vorlagen.</p>
+    </div>
+
+  </div>
+  
+  <div id="pdfHint" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;align-items:center;justify-content:center;padding:20px;">
+    <div style="background:#fff;max-width:560px;width:100%;border-radius:18px;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.2);font-family:Aptos,Segoe UI,Arial,sans-serif;">
+      <h2 style="margin:0 0 12px 0;font-size:1.3rem;">PDF auf dem iPad speichern</h2>
+      <ol style="margin:0 0 18px 20px;line-height:1.6;color:#2b2521;">
+        <li>Tippe oben rechts auf <strong>Teilen</strong>.</li>
+        <li>Tippe auf <strong>Drucken</strong>. Dann mit <strong>zwei Fingern in die Druckvorschau hineinzoomen</strong>, damit sich die PDF öffnet. Danach erneut auf <strong>Teilen</strong> und <strong>In Dateien sichern</strong> tippen.</li>
+        <li>Ohne den Zoom in der Druckvorschau wird meist nur die HTML-Datei gespeichert.</li>
+      </ol>
+      <button onclick="hidePdfHint()" style="padding:12px 18px;border:none;border-radius:999px;background:#0a6d78;color:#fff;font:inherit;cursor:pointer;">Verstanden</button>
+    </div>
+  </div>
+
+  <script>
+    // ── Risikobewertungsregeln ──────────────────────────────────────────────
+    var rules = {
+      f: function(v){ return v===0?'Kein Risiko':v<=3?'Gering':v<=6?'Mittel':'Hoch'; },
+      k: function(v){ return v===0?'Kein Risiko':v===1?'Leicht':v===2?'Mittel':'Hoch'; },
+      p: function(v){ return v<=6?'Nicht gefährdet':v<=15?'Gefährdet':'Stark gefährdet'; },
+      b: function(v){ return v>=15?'Allgemeines Risiko':v>=13?'Mittleres Risiko':v>=10?'Hohes Risiko':'Sehr hohes Risiko'; },
+      s: function(v){ return v<25?'Geringes Risiko':v<=45?'Mittleres Risiko':'Hohes Risiko'; }
+    };
+
+    // ── Hilfsfunktionen ─────────────────────────────────────────────────────
+    function setText(id, val){ var el=document.getElementById(id); if(el) el.textContent=val; }
+
+    function getScore(names){
+      var sum=0, complete=true;
+      for(var i=0;i<names.length;i++){
+        var sel=document.querySelector('input[name="'+names[i]+'"]:checked');
+        if(sel){ sum+=parseInt(sel.value,10)||0; } else { complete=false; }
+      }
+      return {sum:sum, complete:complete};
+    }
+
+    function riskColor(riskText){
+      if(riskText.indexOf('Hoch')!==-1||riskText.indexOf('Sehr')!==-1||riskText.indexOf('Stark')!==-1) return '#b00020';
+      if(riskText.indexOf('Mittel')!==-1||riskText.indexOf('Gefährdet')!==-1) return '#9a6b00';
+      return '#0a6d78';
+    }
+
+    function update(prefix, names, scoreId, riskId, ovScoreId, ovRiskId){
+      var res=getScore(names);
+      var riskText=res.complete ? rules[prefix](res.sum) : 'Noch nicht bearbeitet';
+      setText(scoreId,   res.complete ? res.sum : '–');
+      setText(riskId,    riskText);
+      setText(ovScoreId, res.complete ? res.sum : '–');
+      setText(ovRiskId,  riskText);
+      var el=document.getElementById(ovRiskId);
+      if(el) el.style.color = res.complete ? riskColor(riskText) : '#6c6862';
+    }
+
+    function makeNames(prefix, count){
+      var a=[]; for(var i=0;i<count;i++) a.push(prefix+i); return a;
+    }
+
+    function updateAll(){
+      update('f', makeNames('f',20), 'f-score','f-risk','ov-f-score','ov-f-risk');
+      update('k', ['k0'],           'k-score','k-risk','ov-k-score','ov-k-risk');
+      update('p', makeNames('p',15), 'p-score','p-risk','ov-p-score','ov-p-risk');
+      update('b', makeNames('b',6),  'b-score','b-risk','ov-b-score','ov-b-risk');
+      update('s', ['s0','s1','s2','s3','s4','s5'], 's-score','s-risk','ov-s-score','ov-s-risk');
+    }
+
+    function resetAll(){
+      var radios=document.querySelectorAll('input[type=radio]');
+      for(var i=0;i<radios.length;i++) radios[i].checked=false;
+      updateAll();
+    }
+
+    // ── PDF-Hinweis ─────────────────────────────────────────────────────────
+    function showPdfHint(){ document.getElementById('pdfHint').style.display='flex'; }
+    function hidePdfHint(){ document.getElementById('pdfHint').style.display='none'; }
+    function showPdfHelp(){ showPdfHint(); }
+
+    // ── Initialisierung ─────────────────────────────────────────────────────
+    // Alle Labels haben onclick="updateAll()" direkt im HTML-Attribut gesetzt.
+    // Kein addEventListener, kein Framework – das ist die zuverlässigste
+    // Methode für Safari auf iPadOS.
+    if(document.readyState==='loading'){
+      document.addEventListener('DOMContentLoaded', updateAll);
+    } else {
+      updateAll();
+    }
+  </script>
+</body>
+</html>
